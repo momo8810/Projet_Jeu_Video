@@ -20,6 +20,7 @@
             <element name="image" type="string"/>
             <element name="rect" type="int"/>
             <element name="velocity" type="ms:Coordinate"/>
+            <element name="test" type="string"/>
         </sequence>
     </complexType>
 </schema>
