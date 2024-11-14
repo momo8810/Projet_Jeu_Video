@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema version="1.0"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="www.univ-grenoble-alpes.fr/projetJeuVideo"
+        xmlns:mg="www.univ-grenoble-alpes.fr/projetJeuVideo"
+        elementFormDefault="qualified"
+>
+    <!--importation des autre xsd-->
+    <include schemaLocation="player.xsd"/>
+    <include schemaLocation="monster.xsd"/>
+    
+    <!-- element racine-->
+    <element name="myGame" type="mg:MyGame"/>
+    
+    <!--complexetype de MyGame-->
+    <complexType name="MyGame">
+        <sequence>
+            <element name="player" type="mg:Player"/>
+            <element name="monsters" type="mg:ListeMonster"/>
+            <element name="pressed" type="string"/>
+        </sequence>
+    </complexType>
+    
+    <!--Liste des Monsters-->
+    <complexType name="ListeMonster">
+        <sequence>
+            <element name="monster" type="mg:Monster" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+</schema>

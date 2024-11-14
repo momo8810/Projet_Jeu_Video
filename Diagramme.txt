@@ -1,0 +1,58 @@
+class MyGame{
+player : Player
+pressed : String
+monsters : ListeMonster  
+
+}
+
+class ListeMonster{
+monster : Monster 
+}
+
+class Player{
+health : int
+max_health : int 
+attack : int 
+velocity : int
+image : String
+rect : Rect
+projectiles : ListeProjectile
+}
+
+class ListeProjectile{
+projectile : Projectile
+}
+
+class Monster{
+health : int
+max_health : int
+attack : int
+image :String
+rect : Rect
+velocity : int
+}
+
+class Projectile{
+velocity : int
+image : String
+rect : Rect
+
+}
+
+class Rect{
+x : int
+y : int
+}
+
+
+
+
+
+MyGame *-- Player
+MyGame *-- ListeMonster
+ListeMonster *-- Monster
+Player *-- ListeProjectile
+ListeProjectile *-- Projectile
+Player *-- Rect
+Monster *-- Rect
+Projectile *-- Rect

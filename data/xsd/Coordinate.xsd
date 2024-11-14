@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema version="1.0"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="www.univ-grenoble-alpes.fr/projetJeuVideo"
+        xmlns:co="www.univ-grenoble-alpes.fr/projetJeuVideo"
+        elementFormDefault="qualified"
+>
+    <!--element racine-->
+    <element name="coordinate" type="co:Coordinate"/>
+    
+    <!--complexetype de Coordinate-->
+    <complexType name="Coordinate">
+        <sequence>
+            <element name="X" type="double"/>
+            <element name="Y" type="double"/>
+        </sequence>
+    </complexType>
+    
+</schema>
