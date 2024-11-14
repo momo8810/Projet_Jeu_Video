@@ -13,6 +13,7 @@
         <sequence>
             <element name="X" type="double"/>
             <element name="Y" type="double"/>
+            
         </sequence>
     </complexType>
     
